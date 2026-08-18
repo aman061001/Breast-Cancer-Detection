@@ -1,0 +1,128 @@
+{
+  "student": {
+    "name": "Sangam Samdarshi",
+    "bits_id": "2025AC05127"
+  },
+  "project": "Breast Cancer Wisconsin Diagnostic Classification",
+  "dataset_url": "https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic",
+  "dataset": {
+    "rows": 569,
+    "features": [
+      "radius_mean",
+      "texture_mean",
+      "perimeter_mean",
+      "area_mean",
+      "smoothness_mean",
+      "compactness_mean",
+      "concavity_mean",
+      "concave points_mean",
+      "symmetry_mean",
+      "fractal_dimension_mean",
+      "radius_se",
+      "texture_se",
+      "perimeter_se",
+      "area_se",
+      "smoothness_se",
+      "compactness_se",
+      "concavity_se",
+      "concave points_se",
+      "symmetry_se",
+      "fractal_dimension_se",
+      "radius_worst",
+      "texture_worst",
+      "perimeter_worst",
+      "area_worst",
+      "smoothness_worst",
+      "compactness_worst",
+      "concavity_worst",
+      "concave points_worst",
+      "symmetry_worst",
+      "fractal_dimension_worst"
+    ],
+    "feature_count": 30,
+    "target": "diagnosis",
+    "label_meaning": {
+      "B": "Benign",
+      "M": "Malignant"
+    },
+    "dropped_columns": [
+      "id",
+      "Unnamed: 32"
+    ]
+  },
+  "split": {
+    "train_rows": 455,
+    "test_rows": 114,
+    "test_fraction": 0.2,
+    "random_state": 17,
+    "stratified": true
+  },
+  "positive_class": {
+    "encoded_value": 1,
+    "original_label": "M",
+    "display_label": "Malignant"
+  },
+  "models": {
+    "filenames": {
+      "Logistic Regression": "logistic_regression.joblib",
+      "Decision Tree": "decision_tree.joblib",
+      "kNN": "knn.joblib",
+      "Naive Bayes": "gaussian_naive_bayes.joblib",
+      "Random Forest": "random_forest.joblib"
+    },
+    "results": [
+      {
+        "Model": "Logistic Regression",
+        "Accuracy": 0.9736842105263158,
+        "AUC": 0.9973544973544974,
+        "Precision": 0.9534883720930233,
+        "Recall": 0.9761904761904762,
+        "F1": 0.9647058823529412,
+        "MCC": 0.9438975339262832
+      },
+      {
+        "Model": "Decision Tree",
+        "Accuracy": 0.9385964912280702,
+        "AUC": 0.9667658730158729,
+        "Precision": 0.9069767441860465,
+        "Recall": 0.9285714285714286,
+        "F1": 0.9176470588235294,
+        "MCC": 0.868859654660177
+      },
+      {
+        "Model": "kNN",
+        "Accuracy": 0.9736842105263158,
+        "AUC": 0.9786706349206349,
+        "Precision": 1.0,
+        "Recall": 0.9285714285714286,
+        "F1": 0.9629629629629629,
+        "MCC": 0.9441549509633318
+      },
+      {
+        "Model": "Naive Bayes",
+        "Accuracy": 0.9473684210526315,
+        "AUC": 0.9927248677248677,
+        "Precision": 0.95,
+        "Recall": 0.9047619047619048,
+        "F1": 0.926829268292683,
+        "MCC": 0.8864143349643965
+      },
+      {
+        "Model": "Random Forest",
+        "Accuracy": 0.956140350877193,
+        "AUC": 0.994378306878307,
+        "Precision": 0.9512195121951219,
+        "Recall": 0.9285714285714286,
+        "F1": 0.9397590361445783,
+        "MCC": 0.9054466190452621
+      }
+    ]
+  },
+  "software": {
+    "python": "3.13.14",
+    "pandas": "2.2.3",
+    "numpy": "2.3.5",
+    "scikit_learn": "1.8.0",
+    "joblib": "1.5.3"
+  }
+}
